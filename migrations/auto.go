@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/joho/godotenv"
 	"github.com/maximegorov13/go-api/internal/link"
+	"github.com/maximegorov13/go-api/internal/stat"
 	"github.com/maximegorov13/go-api/internal/user"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -21,5 +22,6 @@ func main() {
 	db.AutoMigrate(
 		&link.Link{},
 		&user.User{},
+		&stat.Stat{},
 	)
 }
